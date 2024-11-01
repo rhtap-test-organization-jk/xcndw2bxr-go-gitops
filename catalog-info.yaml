@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: xcndw2bxr-go-gitops
+  description: This is GitOps manifest for xcndw2bxr-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: xcndw2bxr-go
+    backstage.io/kubernetes-id: xcndw2bxr-go 
+    backstage.io/techdocs-ref: dir:.
+    jenkins.io/job-full-name: xcndw2bxr-go-gitops 
+    github.com/project-slug: rhtap-test-organization-jk/xcndw2bxr-go-gitops 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:xcndw2bxr-go
